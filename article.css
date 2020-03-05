@@ -7,7 +7,7 @@ body{
 }
 
 article{
-    margin: 25px auto;
+    margin: 50px auto;
     max-width: 900px;
     background: #fff;
     border-radius: 15px;
@@ -62,4 +62,81 @@ table{
     background-size:100% 5px;
     background-position:bottom 0 left 0,bottom 5px left 0;
     background-repeat:no-repeat;
+}
+
+#author-img{
+    border-radius: 50%;
+    box-shadow: 0px 0px 7px 3px var(--main-color);
+    grid-row: span 3;
+}
+
+address{
+    margin: 35px var(--paper-margin);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr auto auto;
+    row-gap: 5px;
+    column-gap: 15px;
+    align-items: end;
+}
+
+#date{
+    margin: 0;
+    font-style: normal;
+    font-size: 0.9em;
+}
+
+address > ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    padding: 0;
+    margin: 0;
+}
+
+#author-name{
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+address a{
+    display: flex;
+    align-items: center;
+}
+
+address a::before{
+    content: "";
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+    margin-right: 3px;
+}
+
+#twitter::before{
+    background-image: url('./icons/twitter.svg');
+}
+
+#github::before{
+    background-image: url('./icons/github-1.svg');
+}
+
+#devto::before{
+    background-image: url('./icons/devto.svg');
+}
+
+#homepage::before{
+    background-image: url('./icons/globe.svg');
+}
+
+address a:hover::before{
+    animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }

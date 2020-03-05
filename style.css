@@ -12,7 +12,7 @@ body{
 }
 
 header{
-    filter: drop-shadow(0 7px #3333);
+    filter: drop-shadow(0 8px #3333);
     position: relative;
 }
 
@@ -33,6 +33,13 @@ header > p {
 }
 
 footer{
+    filter: drop-shadow(0 -4px #3333);
+    position: relative;
+}
+
+footer::before{
+    content: "";
+    display: block;
     background: var(--my-gradient);
     clip-path: polygon(0 30%,100% 0,100% 100%,0 100%);
     height: 180px;

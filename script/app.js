@@ -3,7 +3,6 @@ const username = 'gautemeekolsen'
 const getArticles = async () => {
     const response = await fetch(`https://dev.to/api/articles?username=${username}`);
     const data = await response.json();
-    console.log(data);
     const name = data[0].user.name;
     document.querySelectorAll('.name').forEach(el => el.textContent = name);
     document.title = `Blog - ${name}`;

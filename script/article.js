@@ -7,7 +7,11 @@ const getArticle = async () => {
 
     document.title = data.title;
     document.querySelector('#title').textContent = data.title;
-    document.querySelector('#cover').src = data.cover_image;
+    if(data.cover_image){
+        document.querySelector('#cover').src = data.cover_image;
+    }else{
+        document.querySelector('#cover').style.display = 'none';
+    }
 
     document.querySelector('#author-img').src = data.user.profile_image_90;
     document.querySelector('#author-img').addEventListener('click', speedup);

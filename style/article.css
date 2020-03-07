@@ -155,6 +155,8 @@ address a:hover::before{
     color: white;
     border-radius: 5px;
     padding: 5px;
+    min-width: 50px;
+    text-align: center;
 }
 
 @keyframes spin {

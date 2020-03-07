@@ -1,6 +1,14 @@
+:root{
+    --side-margin: 15vw;
+}
+
+header > a {
+    left: var(--side-margin);
+}
+
 ul{
     list-style: none;
-    margin: 25px 15vw;
+    margin: 25px var(--side-margin);
     padding: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -38,7 +46,7 @@ ul{
 }
 
 @media only screen and (max-width: 600px) {
-  ul {
-    margin: 25px;
+  :root{
+      --side-margin: 25px;
   }
 }

@@ -31,8 +31,7 @@ const getArticle = async () => {
         tagList.appendChild(li);
     }
 
-    const articleElement = document.querySelector('#article-body');
-    articleElement.innerHTML = data.body_html;
+    document.querySelector('#article-body').innerHTML = data.body_html;
 }
 
 const setUserLink = (id, hasValue, url, text) => {

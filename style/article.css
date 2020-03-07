@@ -1,5 +1,6 @@
 :root{
     --paper-margin: 60px;
+    --user-img-speed: 10s;
 }
 
 body{
@@ -36,13 +37,13 @@ td li{
     text-align: start;
 }
 
-img{
-    margin: auto;
+#article-body img{
+    margin: 15px auto;
     display: block;
 }
 
 table{
-    margin: auto;
+    margin: 15px auto;
 }
 
 #article-body > *{
@@ -115,23 +116,44 @@ address a::before{
 }
 
 #twitter::before{
-    background-image: url('./icons/twitter.svg');
+    background-image: url('../icons/twitter.svg');
 }
 
 #github::before{
-    background-image: url('./icons/github-1.svg');
+    background-image: url('../icons/github-1.svg');
 }
 
 #devto::before{
-    background-image: url('./icons/devto.svg');
+    background-image: url('../icons/devto.svg');
 }
 
 #homepage::before{
-    background-image: url('./icons/globe.svg');
+    background-image: url('../icons/globe.svg');
 }
 
 address a:hover::before{
     animation: spin 5s linear infinite;
+}
+
+#author-img:hover{
+    animation: spin var(--user-img-speed) linear infinite;
+}
+
+#tags{
+    list-style: none;
+    margin: 5px var(--paper-margin);
+    padding: 0;
+    display: grid;
+    gap: 5px;
+    grid-auto-flow: column;
+    width: fit-content;
+}
+
+#tags > li{
+    background: #333333;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 @keyframes spin {

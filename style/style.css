@@ -9,6 +9,9 @@ body{
     font-family: 'Open Sans';
     letter-spacing: 0.05px;
     font-size: 1.05em;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
 }
 
 header{
@@ -24,12 +27,14 @@ header::before{
     height: 180px;
 }
 
-header > p {
+header > a {
     position: absolute;
-    top: 25px;
+    top: 50px;
     left: max(var(--paper-margin), (100vw - 900px)/2);
     font-size: 1.6em;
     font-family: 'Oxanium';
+    color: inherit;
+    text-decoration: inherit;
 }
 
 footer{

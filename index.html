@@ -3,21 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Gaute Meek Olsen</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Blog</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/home.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oxanium:600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>My blog</h1>
+    <header>
+        <a>Blog - <span class="name"></span></a>
+    </header>
     <ul id="blog-list"></ul>
-    <script src="app.js"></script>
+    <footer></footer>
 </body>
 </html>
 
 <template id="blog-item">
     <li>
         <a class="url">
-            <h2 class="title"></h2>
+            <img class="cover" alt="cover image">
+            <h3 class="title"></h3>
         </a>
     </li>
 </template>
+
+<script src="./script/app.js"></script>

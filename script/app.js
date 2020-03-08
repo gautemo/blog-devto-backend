@@ -1,7 +1,8 @@
 const username = 'gautemeekolsen'
+const perPage = 100; //If you have more articles, increase this or add pagination
 
 const getArticles = async () => {
-    const response = await fetch(`https://dev.to/api/articles?username=${username}`);
+    const response = await fetch(`https://dev.to/api/articles?username=${username}&per_page=${perPage}`);
     const data = await response.json();
     const name = data[0].user.name;
     document.querySelectorAll('.name').forEach(el => el.textContent = name);

@@ -34,7 +34,7 @@ const getArticle = async () => {
         tagList.appendChild(li);
     }
 
-    document.querySelector('#article-body').innerHTML = data.body_html;
+    document.querySelector('#article-body').innerHTML = data.body_html.replace(/\/assets\//g, './assets/');
 }
 
 const setUserLink = (id, hasValue, url) => {

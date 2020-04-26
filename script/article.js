@@ -35,6 +35,13 @@ const getArticle = async () => {
     }
 
     document.querySelector('#article-body').innerHTML = data.body_html.replace(/\/assets\//g, './assets/');
+    document.querySelectorAll('blockquote').forEach(e => {
+        e.addEventListener('click', ({target}) => {
+            if (!target.href && !target.parentElement.href){
+                window.open(e.dataset.url, '_blank');
+            }
+        })
+    });
 }
 
 const setUserLink = (id, hasValue, url) => {

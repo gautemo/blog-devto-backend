@@ -21,7 +21,7 @@ const addArticle = article => {
     if(article.cover_image){
         clone.querySelector('.cover').src = article.cover_image;
     }else{
-        clone.querySelector('.cover').src = './images/placeholder.jpg';
+        clone.querySelector('.cover').src = './assets/placeholder.jpg';
     }
 
     document.querySelector('#blog-list').appendChild(clone);

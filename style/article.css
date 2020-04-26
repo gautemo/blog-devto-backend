@@ -37,7 +37,7 @@ td li{
     text-align: start;
 }
 
-#article-body img{
+.article-body-image-wrapper img{
     margin: 15px auto;
     display: block;
     max-width: 100%;
